@@ -1,10 +1,7 @@
 /**
  * Formats the date into normal human readable format
- * @param {string} iso - The ISO Date value
- * @param {string} [locale] - Defaults to "en-IN"
- * @returns {string}
  */
-export const formatDate = (iso, locale = "en-IN") => {
+export const formatDate = (iso: string, locale: string = "en-IN"): string => {
   const date = new Date(iso);
   return date.toLocaleDateString(locale, {
     day: "numeric",

@@ -1,0 +1,25 @@
+{
+  "name": "nexus-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitKumarDhal/nexus-utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AnkitKumarDhal/nexus-utils/issues"
+  },
+  "homepage": "https://github.com/AnkitKumarDhal/nexus-utils#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

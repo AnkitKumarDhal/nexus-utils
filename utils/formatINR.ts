@@ -1,13 +1,11 @@
 /**
  * Formats a number to Indian Rupee currency format (₹)
- * @param {number} amount - The amount to format
- * @returns {string} - Formatted string like "₹12,34,567"
  */
-export const formatINR = (amount) => {
+export const formatINR = (amount: number): string => {
   let amt = amount.toString();
 
   const parts = amt.split(".");
-  const intPart = parts[0];
+  const intPart = parts[0] ?? "0";
   const decPart = parts[1];
 
   let last3 = intPart.slice(-3);

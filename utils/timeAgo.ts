@@ -1,13 +1,11 @@
 /**
  * Converts an ISO date string to a human-readable "time ago" format
- * @param {string} iso - ISO date string to compare against current time
- * @returns {string} - Relative time string like "2 days ago" or "Just now"
  */
-export const timeAgo = (iso) => {
+export const timeAgo = (iso: string | Date): string => {
   const curDate = new Date();
   const inpDate = new Date(iso);
 
-  const diff = curDate - inpDate;
+  const diff = curDate.getTime() - inpDate.getTime();
 
   const seconds = Math.floor(diff / 1000);
   const minutes = Math.floor(seconds / 60);
@@ -17,5 +15,5 @@ export const timeAgo = (iso) => {
   if (days >= 1) return `${days} days ago`;
   if (hours >= 1) return `${hours} hours ago`;
   if (minutes >= 5) return `${minutes} mins ago`;
-  if (minutes < 5) return `Just now`;
+  return `Just now`;
 };

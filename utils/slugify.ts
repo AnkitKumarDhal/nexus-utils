@@ -1,9 +1,7 @@
 /**
  * Makes text usable in URLs (removes special characters, replaces spaces with "-")
- * @param {string} text - Input Text
- * @returns {string} - final output text with the above mentioned changes
  */
-export const slugify = (text) => {
+export const slugify = (text: string): string => {
   const cleanText = text.trim();
   return cleanText
     .split(" ")

@@ -5,8 +5,6 @@ import { slugify } from "./utils/slugify.js";
 import { groupBy } from "./utils/groupBy.js";
 import { sortBy } from "./utils/sortBy.js";
 import { unique } from "./utils/unique.js";
-import { debounce } from "./utils/debounce.js";
-import { throttle } from "./utils/throttle.js";
 import { formatINR } from "./utils/formatINR.js";
 
 console.log("=== formatDate ===");
@@ -16,7 +14,7 @@ console.log(formatDate("2026-12-25"), "→ expected: 25 Dec 2026");
 console.log(formatDate("2025-03-01", "de-DE"), "→ expected: 1.3.2025");
 
 console.log("\n=== timeAgo ===");
-const now = new Date();
+const now = Date.now();
 const dayMs = 86400000;
 const hourMs = 3600000;
 console.log(timeAgo(new Date(now - 2 * dayMs)), "→ expected: 2 days ago");
